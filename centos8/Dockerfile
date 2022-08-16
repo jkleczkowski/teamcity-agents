@@ -19,7 +19,7 @@ RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-Linux-* &&\
 
 COPY ./root/ /
 
-RUN chmod 0755 /run-*.sh /services/*
+RUN chmod 0755 /run-*.sh /services/* /usr/bin/kubectl
 
 RUN yum install -y java-11-openjdk-devel git yum-utils 
 
